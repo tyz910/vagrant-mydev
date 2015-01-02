@@ -1,9 +1,9 @@
 Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/trusty64"
     config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/14.04/providers/virtualbox.box"
-    config.vm.hostname = "test1"
+    config.vm.hostname = "mydev"
 
-    config.vm.network :private_network, ip: "192.168.10.101"
+    config.vm.network :private_network, ip: "192.168.10.100"
 
     config.vm.provider :virtualbox do |v|
         v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
