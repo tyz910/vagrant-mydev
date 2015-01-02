@@ -11,6 +11,8 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.provision :shell, path: "provision.sh"
+
     config.vm.synced_folder ".", "/vagrant", disabled: true
-    config.vm.synced_folder "./shared", "/vagrant"
+    config.vm.synced_folder "shared", "/vagrant"
+    config.vm.synced_folder "www", "/var/www"
 end
